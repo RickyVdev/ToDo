@@ -1,0 +1,23 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+
+<div class="barra-superior">
+    <h1>Inicio de Sesión</h1>
+</div>
+
+<div class="cuerpo-tarjeta">
+    <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input class="boton" type="submit" value="Ingresar">
+    </form>
+    <!-- Paso 1 para una nueva cosa (siguiente es: crear el archivo .html (registro.html) ) -->
+    <p>No tienes una cuenta? <a href="{% url 'registro' %}">Registrate</a></p>
+    <!-- Paso 5 para una nueva cosa, en esta linea de arriba agregamos el link de esa forma (lo siguiente es: )-->
+</div>
+
+
+
+
+
+{% endblock content %}

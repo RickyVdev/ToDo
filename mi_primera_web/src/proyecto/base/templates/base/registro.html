@@ -1,0 +1,30 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+
+<!-- Paso 2 para una nueva cosa (siguiente es: crear una vista en views.py ) -->
+<div class="barra-superior">
+    <h1>Registrarse</h1>
+</div>
+
+<div class="cuerpo-tarjeta">
+    <form method="POST">
+    {% csrf_token %}
+    <label>{{form.username.label}}</label>
+        {{form.username}}
+
+    <label>{{form.password1.label}}</label>
+        {{form.password1}}
+
+    <label>{{form.password2.label}}</label>
+        {{form.password2}}
+    <input style="margin-top: 10px" class="boton" type="submit" value="Registrar">
+    </form>
+    <!-- Paso 1 para una nueva cosa (siguiente es: crear el archivo .html (registro.html) ) -->
+    <p>Ya tienes una cuenta? <a href="{% url 'login' %}">Ingresa</a></p>
+</div>
+
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+
+<div class="barra-superior">
+    <a href="{%url 'tareas'%}">&#x2936; Volver</a>
+
+</div>
+
+<div class="cuerpo-tarjeta">
+
+    <form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input class="boton" type="submit" value="Enviar">
+    <!-- Esto se hizo aparte
+    <button onclick="window.location.href='{% url 'tareas' %}'">Volver</button> -->
+    </form>
+
+</div>
+
+    <!-- Esto es parte del código original-->
+<!-- <a href="{%url 'tareas'%}">Volver</a> -->
+
+
+
+{% endblock content %}
